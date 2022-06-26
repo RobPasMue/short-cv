@@ -31,8 +31,8 @@ jobs:
       - name: Upload PDF as an artifact
         uses: actions/upload-artifact@v3
         with:
-          name: PDF-Documentation
-          path: out/ROBERTO-PASTOR.pdf
+          name: ROBERTO-PASTOR-CV
+          path: src/cv/out/ROBERTO-PASTOR.pdf
           retention-days: 7
 
       - name: Deploy CV to gh-pages

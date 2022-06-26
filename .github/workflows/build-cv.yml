@@ -41,7 +41,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: out
+          folder: src/cv/out
           clean: true
           single-commit: true
 
@@ -50,4 +50,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ./out/ROBERTO-PASTOR.pdf
+            ./src/cv/out/ROBERTO-PASTOR.pdf

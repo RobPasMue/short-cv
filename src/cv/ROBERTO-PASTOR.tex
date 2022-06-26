@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.1 (8/1/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[hidelinks,letterpaper]{twentysecondcv} % a4paper for A4
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{data/cv-photo.jpg} % Profile picture
+
+\cvname{Roberto Pastor Muela} % Your name
+\cvjobtitle{Flight Dynamics Engineer} % Job title/career
+
+\cvdate{25 April 1995} % Date of birth
+\cvaddress{Madrid, Spain} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{+34 671 22 66 52} % Phone number
+\cvsite{https://www.linkedin.com/ in/RobertoPastorMuela} % Personal website
+\cvmail{roberpm1995@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{Aerospace engineer with a main focus on SW development. My main interests are related to numerical simulations, CFD, flight dynamics systems and astrodynamics. SW architect and developer in computationally-intensive programming languages. Great interest on algorithms. I am orienting my career on positions in which I can expand my knowledge in these areas. With my hard working and dedicated profile together with my past experience, I believe I can contribute to the company's success with a refreshing point of view.} % To have no About Me section, just remove all the text and leave \aboutme{}
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+% Skill bar section, each skill must have a value between 0 an 6 (float)
+\skills{{MATLAB/3.7}, {Java/4}, {Python/4.2}, {Fortran/4.5}, {C, C++, CUDA /4.7}}
+
+%------------------------------------------------
+
+% Skill text section, each skill must have a value between 0 an 6
+\skillstext{{Spanish/Mother tongue},{English/C1*},{German/B2*},{French/A2*}}
+
+%----------------------------------------------------------------------------------------
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem{2022/-}{R\&D Engineer II}{ANSYS}{Development of ANSYS SW products and supporting systems. Collaborating with a team of expert professionals to understand customer requirements and accomplish development objectives.}
+	\twentyitem{2019/22}{Flight Dynamics (FD) and Operations engineer}{GMV}{Precise orbit determination (POD) engineer in projects for institutional clients - Copernicus POD Service (for Sentinels 1, 2, 3 \& 6). Experience in FD softwares (SWs) - NAPEOS, SIRIUS, Orekit, GODOT. SW architect and developer of in-house FD library in C++. CI/CD Responsible. Working with Agile methodologies. Knowledge on GNSS systems and signals processing. Design \& impl. of API REST servers.}
+	\twentyitem{2017}{Processing, automatization and development}{Airbus Def. \& Sp.}{Development \& automatization of qualification tests for rotary actuators used in antenna pointing mechanisms. Post-processing of data to determine system capabilities and requirements verification.}
+	\twentyitem{2014/16}{Teaching Professional and Camp Coordinator}{Leisure Companies}{Coordinator for children ranging 4 to 14 years old. Entirely taught in English. Team managing capabilities and communication skills.}
+	\twentyitem{2013/18}{Support classes for Baccalaureate students}{Private teacher}{University Access Exams and Baccalaureate, in STEM subjects.}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitemdouble{2017/19}{M.Sc. Aeronautical Engineering}{UC3M}{Focus on CFD, space systems and numerical simulations}{Master thesis: \textit{Analysis and control of turbulent skin friction using GPU-DNS}}
+	\twentyitem{2015/16}{B.Sc. Aerospace Engineering}{Universität Stuttgart}{ERASMUS+ Exchange program}
+	\twentyitemdouble{2013/17}{B.Sc. Aerospace Engineering}{UC3M}{Minor in Aerospace Propulsion}{Bachelor thesis: \textit{Improvement of real-time plasma diagnostics}}
+	\twentyitem{2007/13}{High school and Baccalaureate}{CISTA}{Focus on mathematics, physics and new technologies.}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 COURSES
+%----------------------------------------------------------------------------------------
+
+\section{Additional Courses}
+
+\begin{twentyshort} % Environment for a short list with no descriptions
+	\twentyitemshort{2019}{Java Programming Masterclass for SW Developers \hfill 80h}
+	\twentyitemshort{2019}{C++ Basics and Introduction to C \hfill 25h}
+	%\twentyitemshort{2019}{Oracle Java SE Programming \hfill 25h}
+	\twentyitemshort{2018}{Design thinking course at UC3M \hfill 23h}
+	\twentyitemshort{2018}{AIRBUS: Innovative thinking \hfill 12h}
+	\twentyitemshort{2015}{CATIA V5-6: An introduction to CAD \hfill 40h}
+	%\twentyitemshort{2012}{Leisure Activity Organizer and Instructor \hfill 160h}
+	%\twentyitemshort{<dates>}{<title/description>}
+\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Awards}
+
+\begin{twentyshort} % Environment for a short list with no descriptions
+	\vspace{0.2cm}
+	\twentyitemshort{2015/16}{ERASMUS+ Exchange Program scholarship - 1 full academic year at the Universität Stuttgart}
+	\vspace{0.2cm}
+	\twentyitemshort{2013/18}{Modules with honours: Propulsion Systems, Engineering Graphics, Advanced Mathematics, Fluid Mechanics, Thermal Engineering (6 ECTS each) and Aerospace Project Management (3 ECTS)}
+	\twentyitemshort{2013/15}{\textit{"Excellent academic record"} scholarship for university students}
+	\twentyitemshort{2013}{Spanish Baccalaureate with honours. Mark: 10 out of 10}
+	\twentyitemshort{2011}{Spanish Secondary High School with honours. Mark: 10 out of 10}
+	%\twentyitemshort{<dates>}{<title/description>}
+\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 INTERESTS
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+\small{I am a very active person who performs regularly multiple team sports, such as football and rugby. I also enjoy travelling and getting to know different cultures, since I consider it a mind-opening experience. I also enjoy living abroad (+6 years over my life).}
+\vfill
+\flushright\textit{CV was last updated on \today}
+%----------------------------------------------------------------------------------------
+
+\end{document} 

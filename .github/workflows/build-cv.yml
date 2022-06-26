@@ -1,0 +1,52 @@
+name: Build LaTeX document
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    tags:
+      - "*"
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: ROBERTO-PASTOR.tex
+          working_directory: src/cv
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -oudir=out
+
+      - name: Upload PDF Documentation
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDF-Documentation
+          path: out/ROBERTO-PASTOR.pdf
+          retention-days: 7
+
+      - name: Deploy documentation to gh-pages
+        if: github.ref == 'refs/heads/main'
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: out
+          clean: true
+          single-commit: true
+
+      - name: Create a CV release
+        if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ./out/ROBERTO-PASTOR.pdf

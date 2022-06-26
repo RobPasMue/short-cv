@@ -25,7 +25,7 @@ jobs:
         with:
           root_file: ROBERTO-PASTOR.tex
           working_directory: src/cv
-          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -oudir=out
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -outdir=out
 
       - name: Upload PDF as an artifact
         uses: actions/upload-artifact@v3

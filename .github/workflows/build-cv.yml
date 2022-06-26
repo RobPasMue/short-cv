@@ -27,14 +27,14 @@ jobs:
           working_directory: src/cv
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -oudir=out
 
-      - name: Upload PDF Documentation
+      - name: Upload PDF as an artifact
         uses: actions/upload-artifact@v3
         with:
           name: PDF-Documentation
           path: out/ROBERTO-PASTOR.pdf
           retention-days: 7
 
-      - name: Deploy documentation to gh-pages
+      - name: Deploy CV to gh-pages
         if: github.ref == 'refs/heads/main'
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:

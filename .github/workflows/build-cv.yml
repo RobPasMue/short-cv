@@ -43,6 +43,7 @@ jobs:
           branch: gh-pages
           folder: src/cv/out
           clean: true
+          clean-exclude: index.html
           single-commit: true
 
       - name: Create a CV release

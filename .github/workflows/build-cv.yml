@@ -21,10 +21,10 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v3
 
-      - name: Install latexmk
+      - name: Install LaTeX build tools
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y latexmk
+          sudo apt-get install -y latexmk texlive
 
       - name: Run the Makefile
         run: |

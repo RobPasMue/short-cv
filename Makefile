@@ -17,7 +17,7 @@ all: ROBERTO-PASTOR.pdf
 # missing file reference and interactively asking you for an alternative.
 
 ROBERTO-PASTOR.pdf: src/cv/ROBERTO-PASTOR.tex
-        latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make src/cv/ROBERTO-PASTOR.tex -outdir=src/cv/out
+	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make src/cv/ROBERTO-PASTOR.tex -outdir=src/cv/out
 
 clean:
-        latexmk -CA -outdir=src/cv/out
+	latexmk -CA -outdir=src/cv/out

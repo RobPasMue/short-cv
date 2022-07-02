@@ -24,7 +24,7 @@ jobs:
       - name: Install LaTeX build tools
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y latexmk texlive
+          sudo apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra
 
       - name: Run the Makefile
         run: |

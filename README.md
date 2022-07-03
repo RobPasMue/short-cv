@@ -26,14 +26,14 @@ requirements are needed:
 For installing them, just run the following commands on Ubuntu:
 
 ```bash
-    sudo apt-get update -y
-    sudo apt-get install -y latexmk texlive-fonts-extra
+sudo apt-get update -y
+sudo apt-get install -y latexmk texlive-fonts-extra
 ```
 
 Once installed, go to the root directory of the repository and run:
 
 ```bash
-    make all
+make all
 ```
 
 This will automatically generate the resume at the `src/cv/out` folder. This command also cleans up

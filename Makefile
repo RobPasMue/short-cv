@@ -5,7 +5,7 @@
 
 # The first rule in a Makefile is the one executed by default ("make"). It
 # should always be the "all" rule, so that "make" and "make all" are identical.
-all: ROBERTO-PASTOR.pdf
+all: clean ROBERTO-PASTOR.pdf
 
 # MAIN LATEXMK RULE
 
@@ -17,7 +17,7 @@ all: ROBERTO-PASTOR.pdf
 # missing file reference and interactively asking you for an alternative.
 
 ROBERTO-PASTOR.pdf: src/cv/ROBERTO-PASTOR.tex
-	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make ./src/cv/ROBERTO-PASTOR.tex -cd -auxdir=out -outdir=out
+	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make src/cv/ROBERTO-PASTOR.tex -cd -auxdir=out -outdir=out
 
 clean:
-	latexmk -CA -outdir=src/cv/out -auxdir=src/cv/out
+	latexmk -CA src/cv/ROBERTO-PASTOR.tex -cd -auxdir=out -outdir=out

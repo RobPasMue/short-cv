@@ -16,6 +16,7 @@ concurrency:
 jobs:
   make_linux:
     name: Build with Makefile - Linux
+    if: github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository

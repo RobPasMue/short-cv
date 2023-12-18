@@ -32,7 +32,7 @@ jobs:
           make all
 
       - name: Upload PDF as an artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ROBERTO-PASTOR-CV-MAKEFILE-LINUX
           path: src/cv/out/ROBERTO-PASTOR.pdf
@@ -53,7 +53,7 @@ jobs:
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -outdir=out
 
       - name: Upload PDF as an artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ROBERTO-PASTOR-CV
           path: src/cv/out/ROBERTO-PASTOR.pdf

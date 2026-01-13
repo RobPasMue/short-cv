@@ -171,6 +171,7 @@
 			
 		%------------------------------------------------
 
+		\vfill
 		\flushleft\textit{CV was last updated on \today}
 
 	\end{textblock}
